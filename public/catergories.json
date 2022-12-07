@@ -1,0 +1,33 @@
+[
+  {
+    "name": "Acer Aspire 5 A515-56-32DK",
+    "image": "https://m.media-amazon.com/images/I/71pvhTrmZDL.__AC_SY300_SX300_QL70_FMwebp_.jpg",
+    "price": 249
+  },
+  {
+    "name": "Acer Aspire 5 A515-46-R3UB",
+    "image": "https://m.media-amazon.com/images/I/71SCvh0L3OL._AC_SX425_.jpg",
+    "price": 369
+  },
+  {
+    "name": "Samsung Chromebook 4",
+    "image": "https://m.media-amazon.com/images/I/61X3g56kwfL.__AC_SY300_SX300_QL70_FMwebp_.jpg",
+    "price": 94
+  },
+  {
+    "name": "Samsung Chromebook 4",
+    "image": "https://m.media-amazon.com/images/I/815zitaLEvS._AC_SX679_.jpg",
+    "price": 229
+  },
+
+  {
+    "name": "HP 2022 Newest Envy X360",
+    "image": "https://m.media-amazon.com/images/I/81mc5PRHaCL._AC_SX679_.jpg",
+    "price": 630
+  },
+  {
+    "name": "Newest HP 14 HD Laptop",
+    "image": "https://m.media-amazon.com/images/I/71cQ1FnFCrL._AC_UY218_.jpg",
+    "price": 200
+  }
+]
