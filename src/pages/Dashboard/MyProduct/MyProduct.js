@@ -9,7 +9,9 @@ const MyProduct = () => {
 
   // load data for my product data
   useEffect(() => {
-    fetch(`http://localhost:5000/addProduct?email=${user?.email}`)
+    fetch(
+      `https://laptop-sells-server.vercel.app/addProduct?email=${user?.email}`
+    )
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);
@@ -27,7 +29,7 @@ const MyProduct = () => {
       } else if (result.isDenied) {
       }
 
-      fetch(`http://localhost:5000/addProduct/${id}`, {
+      fetch(`https://laptop-sells-server.vercel.app/addProduct/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -48,7 +50,7 @@ const MyProduct = () => {
   };
 
   const DeleteFromHomePage = (id) => {
-    fetch(`http://localhost:5000/addSpecialProduct/${id}`, {
+    fetch(`https://laptop-sells-server.vercel.app/addSpecialProduct/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
@@ -87,7 +89,7 @@ const MyProduct = () => {
       seller: seller,
     };
 
-    fetch(`http://localhost:5000/addSpecialProduct`, {
+    fetch(`https://laptop-sells-server.vercel.app/addSpecialProduct`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

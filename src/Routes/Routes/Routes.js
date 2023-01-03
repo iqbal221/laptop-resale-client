@@ -43,7 +43,7 @@ export const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `http://localhost:5000/categories/${params.id}`
+            `https://laptop-sells-server.vercel.app/categories/${params.id}`
           ),
       },
 
@@ -56,7 +56,7 @@ export const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `http://localhost:5000/addSpecialProduct/${params.id}`
+            `https://laptop-sells-server.vercel.app/addSpecialProduct/${params.id}`
           ),
       },
       {
@@ -67,7 +67,7 @@ export const router = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/wishlist/${params.id}`),
+          fetch(`https://laptop-sells-server.vercel.app/wishlist/${params.id}`),
       },
       {
         path: "/wishlistSpecial/:id",
@@ -78,7 +78,7 @@ export const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `http://localhost:5000/wishlistSpecial/${params.id}`
+            `https://laptop-sells-server.vercel.app/wishlistSpecial/${params.id}`
           ),
       },
     ],
