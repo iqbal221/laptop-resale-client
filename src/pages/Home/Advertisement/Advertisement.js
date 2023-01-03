@@ -11,7 +11,7 @@ const Advertisement = () => {
     queryFn: async () => {
       try {
         const res = await fetch(
-          `https://laptop-sells-server.vercel.app/addSpecialProduct?email=${user?.email}`,
+          `http://localhost:5000/addSpecialProduct?email=${user?.email}`,
           {
             headers: {
               authorization: `bearer ${localStorage.getItem("AN_IT")}`,

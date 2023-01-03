@@ -7,15 +7,12 @@ const MyOrder = () => {
   const { user } = useContext(AuthContext);
   const [orders, setOrders] = useState([]);
   useEffect(() => {
-    fetch(
-      `https://laptop-sells-server.vercel.app/bookings?email=${user?.email}`,
-      {
-        headers: {
-          "content-type": "application/json",
-          authorization: `bearer ${localStorage.getItem("AN_IT")}`,
-        },
-      }
-    )
+    fetch(`http://localhost:5000/bookings?email=${user?.email}`, {
+      headers: {
+        "content-type": "application/json",
+        authorization: `bearer ${localStorage.getItem("AN_IT")}`,
+      },
+    })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -32,7 +29,7 @@ const MyOrder = () => {
       if (result.isConfirmed) {
       } else if (result.isDenied) {
       }
-      fetch(`https://laptop-sells-server.vercel.app/myOrder/${id}`, {
+      fetch(`http://localhost:5000/myOrder/${id}`, {
         method: "DELETE",
         headers: {
           authorization: `bearer ${localStorage.getItem("AN_IT")}`,

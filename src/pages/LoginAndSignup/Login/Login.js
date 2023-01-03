@@ -18,10 +18,11 @@ const Login = () => {
     register,
   } = useForm();
 
-  const from = location?.state?.from?.pathname || "/";
+  const from = location.state?.from?.pathname || "/";
 
   if (token) {
     navigate(from, { replace: true });
+    // navigate("/");
   }
 
   const handleLogin = (data) => {
@@ -98,11 +99,13 @@ const Login = () => {
                 </p>
               )}
             </div>
-            <input
-              className="btn btn-warning  w-full mt-3"
-              type="submit"
-              value="Login"
-            />
+            <div className="form-control">
+              <input
+                className="btn btn-warning  w-full mt-3"
+                type="submit"
+                value="Login"
+              />
+            </div>
           </form>
           <p className="text-center text-sm mt-1">
             New to AN IT BARI ?{" "}

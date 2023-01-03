@@ -8,6 +8,7 @@ import MyProduct from "../MyProduct/MyProduct";
 const Dashboard = () => {
   const { user } = useContext(AuthContext);
   const [isAdmin, isUser, isSeller] = useAdmin(user?.email);
+
   return (
     <div>
       {isUser && <MyOrder></MyOrder>}

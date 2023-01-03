@@ -4,7 +4,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Login from "../../pages/LoginAndSignup/Login/Login";
 import Signup from "../../pages/LoginAndSignup/Signup/Signup";
 import CategoryDetails from "../../pages/Home/CategoryDetails/CategoryDetails";
-import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
+
 import NotFound from "../../pages/NotFound/NotFound";
 import DashboardLayout from "../../Layout/DashboardLayout";
 import Dashboard from "../../pages/Dashboard/Dashboard/Dashboard";
@@ -15,6 +15,7 @@ import MyProduct from "../../pages/Dashboard/MyProduct/MyProduct";
 import Blogs from "../../pages/Blogs/Blogs";
 import Wishlist from "../../pages/Home/Whislist/Wishlist";
 import CategoryDetailsSpecial from "../../pages/Home/CategoryDetailsSpecial/CategoryDetailsSpecial";
+import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
 
 export const router = createBrowserRouter([
   {
@@ -42,7 +43,7 @@ export const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `https://laptop-sells-server.vercel.app/categories/${params.id}`
+            `http://localhost:5000/categories/${params.id}`
           ),
       },
 
@@ -55,7 +56,7 @@ export const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `https://laptop-sells-server.vercel.app/addSpecialProduct/${params.id}`
+            `http://localhost:5000/addSpecialProduct/${params.id}`
           ),
       },
       {
@@ -66,7 +67,7 @@ export const router = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`https://laptop-sells-server.vercel.app/wishlist/${params.id}`),
+          fetch(`http://localhost:5000/wishlist/${params.id}`),
       },
       {
         path: "/wishlistSpecial/:id",
@@ -77,7 +78,7 @@ export const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `https://laptop-sells-server.vercel.app/wishlistSpecial/${params.id}`
+            `http://localhost:5000/wishlistSpecial/${params.id}`
           ),
       },
     ],
