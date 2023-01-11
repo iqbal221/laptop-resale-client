@@ -9,7 +9,7 @@ const BuyerAndSeller = () => {
   // const [remainingSellers, setRemainingSellers] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/users", {
+    fetch("https://laptop-sells-server.vercel.app/users", {
       headers: {
         authorization: `bearer ${localStorage.getItem("AN_IT")}`,
       },
@@ -39,7 +39,7 @@ const BuyerAndSeller = () => {
       } else if (result.isDenied) {
       }
 
-      fetch(`http://localhost:5000/users/${id}`, {
+      fetch(`https://laptop-sells-server.vercel.app/users/${id}`, {
         method: "DELETE",
         headers: {
           authorization: `bearer ${localStorage.getItem("AN_IT")}`,

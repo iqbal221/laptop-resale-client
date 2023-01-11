@@ -46,7 +46,7 @@ const AddProduct = () => {
             buttonText: "Advertised",
           };
 
-          fetch("http://localhost:5000/addProduct", {
+          fetch("https://laptop-sells-server.vercel.app/addProduct", {
             method: "POST",
             headers: {
               "content-type": "application/json",

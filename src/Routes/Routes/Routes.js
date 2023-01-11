@@ -15,7 +15,7 @@ import MyProduct from "../../pages/Dashboard/MyProduct/MyProduct";
 import Blogs from "../../pages/Blogs/Blogs";
 import Wishlist from "../../pages/Home/Whislist/Wishlist";
 import CategoryDetailsSpecial from "../../pages/Home/CategoryDetailsSpecial/CategoryDetailsSpecial";
-import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
+// import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
 
 export const router = createBrowserRouter([
   {
@@ -36,11 +36,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/categories/:id",
-        element: (
-          <PrivateRoutes>
-            <CategoryDetails></CategoryDetails>
-          </PrivateRoutes>
-        ),
+        element: <CategoryDetails></CategoryDetails>,
         loader: ({ params }) =>
           fetch(
             `https://laptop-sells-server.vercel.app/categories/${params.id}`
@@ -49,11 +45,7 @@ export const router = createBrowserRouter([
 
       {
         path: "/addSpecialProduct/:id",
-        element: (
-          <PrivateRoutes>
-            <CategoryDetailsSpecial></CategoryDetailsSpecial>
-          </PrivateRoutes>
-        ),
+        element: <CategoryDetailsSpecial></CategoryDetailsSpecial>,
         loader: ({ params }) =>
           fetch(
             `https://laptop-sells-server.vercel.app/addSpecialProduct/${params.id}`
@@ -61,21 +53,13 @@ export const router = createBrowserRouter([
       },
       {
         path: "/wishlist/:id",
-        element: (
-          <PrivateRoutes>
-            <Wishlist></Wishlist>
-          </PrivateRoutes>
-        ),
+        element: <Wishlist></Wishlist>,
         loader: ({ params }) =>
           fetch(`https://laptop-sells-server.vercel.app/wishlist/${params.id}`),
       },
       {
         path: "/wishlistSpecial/:id",
-        element: (
-          <PrivateRoutes>
-            <Wishlist></Wishlist>
-          </PrivateRoutes>
-        ),
+        element: <Wishlist></Wishlist>,
         loader: ({ params }) =>
           fetch(
             `https://laptop-sells-server.vercel.app/wishlistSpecial/${params.id}`

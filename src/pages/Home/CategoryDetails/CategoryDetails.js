@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import BookingModal from "../Booking/BookingModal";
 import { MdVerifiedUser } from "react-icons/md";
+import useAdmin from "../../../Hooks/useAdmin";
 
 const CategoryDetails = () => {
   const data = useLoaderData();
+  const [isUser] = useAdmin();
 
   const {
     image,

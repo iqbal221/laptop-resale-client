@@ -10,7 +10,7 @@ const Login = () => {
   const [loginError, setLoginError] = useState("");
   const [token] = useToken(userLoginEmail);
   const { userLogin, googleLogin } = useContext(AuthContext);
-  const location = useLocation();
+  // const location = useLocation();
   const navigate = useNavigate();
   const {
     handleSubmit,
@@ -18,11 +18,11 @@ const Login = () => {
     register,
   } = useForm();
 
-  const from = location.state?.from?.pathname || "/";
+  // const from = location.state?.from?.pathname || "/";
 
   if (token) {
-    navigate(from, { replace: true });
-    // navigate("/");
+    // navigate(from, { replace: true });
+    navigate("/");
   }
 
   const handleLogin = (data) => {
