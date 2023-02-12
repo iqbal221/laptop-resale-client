@@ -25,10 +25,10 @@ const Categories = () => {
 
   return (
     <div>
-      <h2 className="lg:text-4xl md:text-2xl text-xl text-gray-500 text-center lg:mt-40 md:mt-24 mt-14 font-bold">
+      <h2 className="lg:text-4xl md:text-2xl text-xl text-primary text-center lg:mt-40 md:mt-24 mt-14 font-bold">
         Choose Your Best Choice
       </h2>
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 lg:mt-24 md:mt-14 mt-8">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 lg:mt-32 md:mt-14 mt-8">
         {categories?.map((category) => (
           <CategoryCard key={category._id} category={category}></CategoryCard>
         ))}

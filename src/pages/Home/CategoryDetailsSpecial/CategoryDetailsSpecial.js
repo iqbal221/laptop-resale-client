@@ -22,7 +22,7 @@ const CategoryDetailsSpecial = () => {
 
   return (
     <div className="md:flex flex-column  lg:px-24 md:px-3 px-3 lg:mt-20 md:mt-14 mt-8 mx-auto">
-      <div className="card bg-base-100 shadow-lg md:w-1/3 w-full p-4 md:mx-3 mx-0">
+      <div className="card bg-base-100 shadow-lg hover:shadow-indigo-500/50 md:w-1/3 w-full p-4 md:mx-3 mx-0">
         <figure>
           <img src={image} alt="Shoes" className="pt-14 " />
         </figure>

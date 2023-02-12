@@ -3,7 +3,7 @@ import React from "react";
 const DiscountOffer = () => {
   return (
     <div className="mt-24">
-      <div className="card md:card-side bg-base-100 shadow-lg">
+      <div className="card md:card-side bg-base-100 hover:shadow-indigo-500/50 shadow-lg cursor-pointer">
         <div className="md:w-1/3 w-full bg-black flex justify-center items-center  ">
           <div className="md:p-0 p-10">
             <p className="text-white text-md italic">Amazing offer</p>

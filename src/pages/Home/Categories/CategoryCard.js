@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineHeart } from "react-icons/ai";
+import { AuthContext } from "../../../Context/AuthProvider";
 
 const CategoryCard = ({ category }) => {
   const { resalePrice, product, image, _id } = category;
+  const { user } = useContext(AuthContext);
   // console.log(category);
 
   return (
-    <div className="card bg-base-100 md:shadow-lg shadow-md ">
+    <div className="card bg-base-100 md:shadow-lg hover:shadow-indigo-500/50 shadow-md cursor-pointer">
       <figure>
         <img src={image} alt="Shoes" className="w-64 h-52 px-3 pt-5 pb-2" />
       </figure>
@@ -23,12 +25,18 @@ const CategoryCard = ({ category }) => {
               </button>
             </Link>
           </div>
-          <Link
-            className="btn btn-outline btn-warning btn-sm"
-            to={`/categories/${_id}`}
-          >
-            <button>Show details</button>
-          </Link>
+          {user ? (
+            <Link
+              className="btn btn-outline btn-warning btn-sm"
+              to={`/categories/${_id}`}
+            >
+              <button>Show details</button>
+            </Link>
+          ) : (
+            <Link className="btn btn-outline btn-warning btn-sm" to={`/login`}>
+              <button>Show details</button>
+            </Link>
+          )}
         </div>
       </div>
     </div>
